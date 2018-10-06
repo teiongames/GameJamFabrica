@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 27f122e02a9060940b7bd565bdc981a4
+  productGUID: e2e9e9ec0da9b0e45980ec1c4e07e230
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -393,6 +393,7 @@ PlayerSettings:
   switchAllowsVideoCapturing: 1
   switchAllowsRuntimeAddOnContentInstall: 0
   switchDataLossConfirmation: 0
+  switchUserAccountLockEnabled: 0
   switchSupportedNpadStyles: 3
   switchNativeFsCacheSize: 32
   switchIsHoldTypeHorizontal: 0
@@ -618,8 +619,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 0ee06a7e-3a3d-4550-a4c0-1c6ec5c87ad7
-  projectName: GameJamFabrica
+  cloudProjectId: 9b06dd6f-1cdd-459a-a962-6fa155b984e4
+  projectName: GameJamFabrica (1)
   organizationId: teion-games
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
