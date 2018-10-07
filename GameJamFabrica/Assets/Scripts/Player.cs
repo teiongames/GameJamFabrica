@@ -11,17 +11,31 @@ public class Player : MonoBehaviour {
     {
         health.Initialize();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-        if (Input.GetKeyDown(KeyCode.Q))
+
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        if (enemy != null)
         {
-            health.CurrentVal -= 10;
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            health.CurrentVal += 10;
+            TakeDamage(10);
         }
     }
+
+
+public void TakeDamage(int damage)
+{
+        health.CurrentVal -= 10;
+
+    if (health.CurrentVal <= 0)
+    {
+            //gameover
+            Destroy(gameObject);
+            //passa pra cena
+    }
+}
+
+// Update is called once per frame
+void Update() {
+
+}
 }
