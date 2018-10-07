@@ -55,6 +55,8 @@ GameObject:
   - component: {fileID: 61821806165706366}
   - component: {fileID: 58078813321694578}
   - component: {fileID: 95441625383410716}
+  - component: {fileID: 114669822896224372}
+  - component: {fileID: 114979927874692312}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
@@ -162,7 +164,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1241498252045900}
   m_Enabled: 0
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0ecf6b140e26a8a428c6feb5dfd69f68, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -202,7 +204,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1241498252045900}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0ecf6b140e26a8a428c6feb5dfd69f68, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -268,6 +270,21 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114669822896224372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241498252045900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1729d02dc5bd8dd449595d2e8c3b15b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  speed: 1
 --- !u!114 &114746914650900726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,6 +297,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 20
+--- !u!114 &114979927874692312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241498252045900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1778f6e6742653e48aeadc3582284f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
 --- !u!212 &212496038437285490
 SpriteRenderer:
   m_ObjectHideFlags: 1
