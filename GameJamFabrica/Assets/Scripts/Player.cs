@@ -4,36 +4,37 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    [SerializeField]
-    private Stats health;
+    
+    public Stats health;
+     bool invincible = false;
+    public int invencitime = 1;
 
     private void Awake()
     {
         health.Initialize();
     }
 
-    void OnTriggerEnter2D(Collider2D hitInfo)
+
+    public void TakeDamage(int damage)
     {
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (enemy != null)
+        if (!invincible)
         {
-            TakeDamage(10);
+            health.CurrentVal -= 10;
+            invincible = true;
+            Invoke("resetinvincible", invencitime);
+        }
+        if (health.CurrentVal <= 0)
+        {
+                //gameover
+                Destroy(gameObject);
+                //passa pra cena
         }
     }
 
-
-public void TakeDamage(int damage)
-{
-        health.CurrentVal -= 10;
-
-    if (health.CurrentVal <= 0)
+    void resetinvincible()
     {
-            //gameover
-            Destroy(gameObject);
-            //passa pra cena
+        invincible = false;
     }
-}
-
 // Update is called once per frame
 void Update() {
 

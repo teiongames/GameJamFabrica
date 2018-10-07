@@ -55,8 +55,9 @@ GameObject:
   - component: {fileID: 61821806165706366}
   - component: {fileID: 58078813321694578}
   - component: {fileID: 95441625383410716}
-  - component: {fileID: 114669822896224372}
-  - component: {fileID: 114979927874692312}
+  - component: {fileID: 114525910962322922}
+  - component: {fileID: 114980203631885396}
+  - component: {fileID: 114229951305645354}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
@@ -239,6 +240,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114229951305645354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241498252045900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask: -1
 --- !u!114 &114301049183062664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,7 +297,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114669822896224372
+--- !u!114 &114525910962322922
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,13 +305,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1241498252045900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1729d02dc5bd8dd449595d2e8c3b15b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1778f6e6742653e48aeadc3582284f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 0
-  speed: 1
+  health: 10
 --- !u!114 &114746914650900726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 20
---- !u!114 &114979927874692312
+--- !u!114 &114980203631885396
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,10 +329,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1241498252045900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1778f6e6742653e48aeadc3582284f07, type: 3}
+  m_Script: {fileID: 11500000, guid: 1729d02dc5bd8dd449595d2e8c3b15b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  target: {fileID: 0}
+  updateRate: 2
+  speed: 300
+  fMode: 1
+  pathIsEnded: 0
+  nextWaypointDistance: 5
 --- !u!212 &212496038437285490
 SpriteRenderer:
   m_ObjectHideFlags: 1

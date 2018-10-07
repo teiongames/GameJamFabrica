@@ -17,6 +17,14 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        Player player = hitInfo.GetComponent<Player>();
+        if (player != null)
+        {
+               player.TakeDamage(10);  
+        }
+    } 
     void Die()
     {
     //    Instantiate(deathEffect, transform.position, Quaternion.identity);
